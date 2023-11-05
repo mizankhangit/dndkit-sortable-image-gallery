@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Inter", sans-serif;
+  }
+}
+input:checked + .chcked-icon {
+  @apply bg-blue-600;
+}
+input:checked + .chcked-icon svg {
+  @apply block;
+}
