@@ -24,10 +24,12 @@ import data from "./../../_data/gallery-items.json";
 
 const ImageGalleryPage = () => {
   const [items, setItems] = useState(data);
-  const [selected, setSelected] = useState<number[]>([]);
+  const [selected, setSelected] = useState<any>([]);
   const [activeId, setActiveId] = useState<any>(null);
-  const getIndex = (id: any) => items.findIndex((item) => item.id === id);
+  const getIndex = (id: any) => items.findIndex((item) => item.id == id);
   const activeIndex = activeId ? getIndex(activeId) : -1;
+
+  console.log({ selected });
 
   // Handle drag start
   const handleDragStart = ({ active }: any) => {
@@ -40,7 +42,7 @@ const ImageGalleryPage = () => {
     setActiveId(null);
     if (over) {
       const overIndex = getIndex(over.id);
-      if (activeIndex !== overIndex) {
+      if (activeIndex != overIndex) {
         setItems((items) => arrayMove(items, activeIndex, overIndex));
       }
     }
@@ -48,11 +50,11 @@ const ImageGalleryPage = () => {
 
   // Checked and unchecked functionality
   const onCheckedUnchecked = (event: any) => {
-    const checkedItem = parseInt(event.target.value);
+    const checkedItem: any = event.target.value;
     if (selected.includes(checkedItem)) {
-      setSelected(selected.filter((item) => item !== checkedItem));
+      setSelected(selected.filter((item: any) => item != checkedItem));
     } else {
-      setSelected((prev) => [...prev, checkedItem]);
+      setSelected((prev: any) => [...prev, checkedItem]);
     }
   };
 

@@ -17,7 +17,7 @@ const AddImage = ({ setItems }: any) => {
           id: uuidv4(),
           imgSrc: dataURL,
         });
-        if (newItems.length === selectedFiles.length) {
+        if (newItems.length == selectedFiles.length) {
           setItems((prev: any) => [...prev, ...newItems]);
         }
       };

@@ -48,7 +48,7 @@ export const Item = memo(
           className={`${classNames(
             styles.Wrapper
           )} border rounded-lg shadow-sm relative group ${
-            index === 0 ? "col-span-2 row-span-2" : ""
+            index == 0 ? "col-span-2 row-span-2" : ""
           }`}
           style={
             {
@@ -114,7 +114,7 @@ export const Item = memo(
           >
             <img
               className={`rounded-lg w-full h-full object-cover  ${
-                index === 0
+                index == 0
                   ? "md:max-h-[410px] min-h-[410px]"
                   : "md:max-h-[190px] md:min-h-[190px]"
               } ${checked ? "opacity-50" : ""}`}
