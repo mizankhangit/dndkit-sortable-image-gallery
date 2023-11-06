@@ -115,7 +115,7 @@ export const Item = memo(
             <img
               className={`rounded-lg w-full h-full object-cover ${
                 index == 0
-                  ? "md:max-h-[410px] min-h-[410px]"
+                  ? "md:max-h-[410px] md:min-h-[410px]"
                   : !activeId
                   ? "md:max-h-[190px] md:min-h-[190px]"
                   : ""
