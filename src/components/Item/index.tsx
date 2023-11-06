@@ -113,10 +113,12 @@ export const Item = memo(
             {...props}
           >
             <img
-              className={`rounded-lg w-full h-full object-cover  ${
+              className={`rounded-lg w-full h-full object-cover ${
                 index == 0
                   ? "md:max-h-[410px] min-h-[410px]"
-                  : "md:max-h-[190px] md:min-h-[190px]"
+                  : !activeId
+                  ? "md:max-h-[190px] md:min-h-[190px]"
+                  : ""
               } ${checked ? "opacity-50" : ""}`}
               src={data.imgSrc}
               alt={data.name}
