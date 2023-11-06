@@ -89,7 +89,6 @@ const ImageGalleryPage = () => {
                 {items.map((item, index) => (
                   <SortableItem
                     key={item.id}
-                    id={item.id}
                     data={item}
                     index={index}
                     onCheckedUnchecked={onCheckedUnchecked}
