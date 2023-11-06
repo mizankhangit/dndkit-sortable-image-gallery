@@ -12,3 +12,4 @@
 - Mobile responsive
 - Mobile and touch screen support
 - Multiple image upload
+- Multiple image delete
