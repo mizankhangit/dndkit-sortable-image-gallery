@@ -93,9 +93,6 @@ const ImageGalleryPage = () => {
                     data={item}
                     index={index}
                     onCheckedUnchecked={onCheckedUnchecked}
-                    // style={getItemStyles}
-                    // wrapperStyle={wrapperStyle}
-                    // useDragOverlay={useDragOverlay}
                   />
                 ))}
                 <AddImage />
@@ -119,25 +116,7 @@ const ImageGalleryPage = () => {
           }}
         >
           {activeId ? (
-            <Item
-              data={items[activeIndex]}
-              activeId={activeId}
-              // wrapperStyle={wrapperStyle({
-              //   active: { id: activeId },
-              //   index: activeIndex,
-              //   isDragging: true,
-              //   id: items[activeIndex],
-              // })}
-              // style={getItemStyles({
-              //   id: items[activeIndex],
-              //   index: activeIndex,
-              //   isSorting: activeId !== null,
-              //   isDragging: true,
-              //   overIndex: -1,
-              //   isDragOverlay: true,
-              // })}
-              dragOverlay
-            />
+            <Item data={items[activeIndex]} activeId={activeId} dragOverlay />
           ) : null}
         </DragOverlay>,
         document.body
