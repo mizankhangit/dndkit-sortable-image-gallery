@@ -63,8 +63,6 @@ const ImageGalleryPage = () => {
     setSelected([]);
   };
 
-  console.log({ activeId });
-
   return (
     <DndContext
       sensors={useSensors(
@@ -94,7 +92,7 @@ const ImageGalleryPage = () => {
                     onCheckedUnchecked={onCheckedUnchecked}
                   />
                 ))}
-                <AddImage />
+                <AddImage setItems={setItems} />
               </ul>
             </SortableContext>
           </div>
