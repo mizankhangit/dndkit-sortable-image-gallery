@@ -29,8 +29,6 @@ const ImageGalleryPage = () => {
   const getIndex = (id: any) => items.findIndex((item) => item.id == id);
   const activeIndex = activeId ? getIndex(activeId) : -1;
 
-  console.log({ selected });
-
   // Handle drag start
   const handleDragStart = ({ active }: any) => {
     if (!active) return;
